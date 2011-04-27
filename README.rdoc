@@ -12,9 +12,14 @@ and add the following to your project's Gemfile
 
 == Notes/Use
 
-Run the 'rails generate' command for a list of generators. To see the usage
-information for a particular generator, use 'rails generate <GENERATOR NAME>
---help'
+Run the
+
+  rails generate
+
+command for a list of generators. To see the usage information for a particular
+generator, use
+  
+  rails generate <GENERATOR NAME> --help
 
 == Note on Patches/Pull Requests
 

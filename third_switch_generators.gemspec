@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Bob Nadler, Jr."]
   s.email       = ["bnadlerjr@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/bnadlerjr/third_switch_generators"
   s.summary     = %q{Various Rails 3 Generators}
   s.description = %q{}
 
