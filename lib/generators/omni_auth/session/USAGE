@@ -1,0 +1,3 @@
+Description:
+    Generates a session controller, callback and signout routes, and a current
+    user helper method.

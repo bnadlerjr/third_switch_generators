@@ -1,0 +1,3 @@
+module ThirdSwitchGenerators
+  # Your code goes here...
+end

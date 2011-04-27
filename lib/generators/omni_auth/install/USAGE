@@ -1,0 +1,3 @@
+Description:
+    Installs OmniAuth. Adds OmniAuth reference to Gemfile and creates an
+    initializer. Configure app credentials using this initializer.
