@@ -3,7 +3,7 @@ module OmniAuth
     source_root File.expand_path('../templates', __FILE__)
 
     def add_omniauth_to_gemfile
-      gem 'omniauth'
+      gem 'omniauth', '0.1.6'
       run 'bundle install'
     end
 
