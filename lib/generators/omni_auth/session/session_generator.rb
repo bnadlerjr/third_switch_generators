@@ -52,7 +52,7 @@ module OmniAuth
     end
 
     def controller_tests
-      insert_into_file "test/functional/sessions_controller_test.rb", "class SessionsControllerTest < ActionController::TestCase\n" do
+      insert_into_file "test/functional/sessions_controller_test.rb", :after => "class SessionsControllerTest < ActionController::TestCase\n" do
         <<-RUBY
   setup do
     @omniauth_hash = {
