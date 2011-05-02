@@ -52,20 +52,15 @@ module OmniAuth
     end
 
     def controller_tests
-      insert_into_file "test/functional/sessions_controller_test.rb", :after => "class SessionsControllerTest < ActionController::TestCase\n" do
+      inject_into_class "test/functional/sessions_controller_test.rb", SessionsControllerTest do
         <<-RUBY
   setup do
     @omniauth_hash = {
       "user_info" => {
-        "first_name" => "Jane",
-        "last_name"  => "Doe",
-        "email"      => "jane.doe@example.com"
+        "name" => "John Doe"
       },
       "uid" => 1234,
-      "provider" => "thirty_seven_signals",
-      "credentials" => {
-        "token" => "janes-access-token"
-      }
+      "provider" => "thirty_seven_signals"
     }
 
     request.env['omniauth.auth'] = @omniauth_hash

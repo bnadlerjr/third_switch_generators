@@ -5,7 +5,7 @@ class UserTest < ActiveSupport::TestCase
     @user = Factory.build(:user)
   end
 
-  # Uniqueness validator tests
+  # Presence validator tests
   %w[name provider uid].each do |field|
     test "requires #{field}" do
       @user.send("#{field}=".to_sym, nil)
