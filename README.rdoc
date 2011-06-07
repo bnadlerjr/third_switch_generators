@@ -4,11 +4,9 @@ Various Rails 3 compatible generators.
 
 == Install
 
-  gem install third_switch_generators
+Add the following to your project's Gemfile
 
-and add the following to your project's Gemfile
-
-  gem 'third_switch_generators'
+    gem "third_switch_generators", :git => "git://github.com/bnadlerjr/third_switch_generators.git"
 
 == Notes/Use
 
