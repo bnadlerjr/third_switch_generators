@@ -19,6 +19,8 @@ Available generators are:
   - session
   - user
 
+* model_maker (create models from SQL Editor .sqs file)
+
 To see the usage information for a particular generator, use
 
   rails generate <GENERATOR NAME> --help

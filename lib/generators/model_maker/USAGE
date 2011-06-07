@@ -1,0 +1,9 @@
+Description:
+    Generates migrations and models based on a SQL Editor file.
+
+Example:
+    rails generate model_maker path/to/file.sqs
+
+    This will create:
+        a migration file, a model file, associations for model, and validations
+        for model for each table in the .sqs file.
