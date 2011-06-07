@@ -72,7 +72,7 @@ class SQSParser
     def validation_block
       "\n" + @validations.map do |k, v|
         "  #{k} #{v.map { |r| ":#{r}" }.join(', ')}" unless v.empty?
-      end.join("\n")
+      end.join("\n") + "\n"
     end
 
     private
