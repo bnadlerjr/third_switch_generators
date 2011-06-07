@@ -65,7 +65,8 @@ class SQSParser
 
     def association_block
       @associations.map do |k, v|
-        "  #{k} #{v.map { |r| ":#{r}" }.join(', ')}" unless v.empty?
+        v.map { |assoc| "  #{k} :#{assoc}\n" }
+        #"  #{k} #{v.map { |r| ":#{r}" }.join(', ')}" unless v.empty?
       end.join("\n")
     end
 
@@ -80,7 +81,8 @@ class SQSParser
     def create_validations
       validations = Hash.new { |hash, key| hash[key] = [] }
       @table_node.xpath('SQLField[notNull="1"]').each do |f|
-        unless (name = f.xpath('name').text) == 'id'
+        name = f.xpath('name').text
+        unless name == 'id' || name =~ /\w+_id/
           validations[:validates_presence_of] << name
         end
       end
